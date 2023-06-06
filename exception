@@ -1,0 +1,43 @@
+//Hata Yonetimi...
+//Yazım Hataları
+//Hatalı metinin altı kırmız olarak çizilir, ve uygulama derlenmez...
+
+//Mantıksal Hatalar
+//Uyarı verilmez...(Design-Time veya Run-Time esnasında)
+//Bulunması zordur...
+
+//Istisnalar(Exception)
+
+//Debugging
+
+//Design-Time
+//Run-Time
+//console.writeline("merhaba dunya");
+//Console.WriteLine("")
+
+int[] sayilar = { 2, 65, 7 };
+Console.WriteLine(sayilar[10]);
+
+int a = 12, b = 0, c = 0;
+
+c = a / b;
+
+Console.WriteLine(c);
+
+Console.WriteLine("Merhaba");
+
+///ONEMLI
+///try-catch kullanmadan riski onleyebiliyorsak, oyle yapmalıyız...
+///şart cumleleri ile engellenebiliyorsa, onunla engelle
+
+//Istisnaların yakalanması
+// try :  riskin oldugu satirlari try blogu icerisine almak lazım...
+
+// catch : olusan istisnaları yakalamak icin kullanılır...
+
+// finally: istisna olsa da olmasa da mutlaka calisir...
+
+// throw
+
+//try,catch, finally : istisna yakalamak için kullanılır...
+//throw : istisna olusturmak için kullanılır...
