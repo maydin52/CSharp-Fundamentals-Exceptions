@@ -1,0 +1,140 @@
+//Hata Yonetimi...
+//Yazım Hataları
+//Hatalı metinin altı kırmız olarak çizilir, ve uygulama derlenmez...
+
+//Mantıksal Hatalar
+//Uyarı verilmez...(Design-Time veya Run-Time esnasında)
+//Bulunması zordur...
+
+//Istisnalar(Exception)
+
+//Debugging
+
+//Design-Time
+//Run-Time
+//console.writeline("merhaba dunya");
+//Console.WriteLine("")
+
+int[] sayilar = { 2, 65, 7 };
+Console.WriteLine(sayilar[10]);
+
+int a = 12, b = 0, c = 0;
+
+c = a / b;
+
+Console.WriteLine(c);
+
+Console.WriteLine("Merhaba");
+
+///ONEMLI
+///try-catch kullanmadan riski onleyebiliyorsak, oyle yapmalıyız...
+///şart cumleleri ile engellenebiliyorsa, onunla engelle
+
+//Istisnaların yakalanması
+// try :  riskin oldugu satirlari try blogu icerisine almak lazım...
+
+// catch : olusan istisnaları yakalamak icin kullanılır...
+
+// finally: istisna olsa da olmasa da mutlaka calisir...
+
+// throw
+
+//try,catch, finally : istisna yakalamak için kullanılır...
+//throw : istisna olusturmak için kullanılır...
+
+----------------------------------
+
+
+try
+{
+    int[] sayilar = { 2, 65, 7 };
+    Console.WriteLine(sayilar[10]);
+
+    int a = 12, b = 0, c = 0;
+
+    c = a / b;
+
+    Console.WriteLine(c);
+
+}
+catch 
+{
+    Console.WriteLine("ISTISNA Olustu...");
+
+}
+Console.WriteLine("Merhaba");
+
+-------------------------------------------
+
+
+try
+{
+    int[] sayilar = { 2, 65, 7 };
+    Console.WriteLine(sayilar[1]);
+
+    int a = 12, b = 1, c = 0;
+
+    c = a / b;
+
+    Console.WriteLine(c);
+
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine("SMS Gonder...");
+}
+catch (IndexOutOfRangeException ex)
+{
+    Console.WriteLine("Veritabanına yaz...");
+}
+catch (Exception ex)
+{
+    //Birden fazla catch kullanımlarında en genel olan en sonda olmalı...
+    Console.WriteLine("ISTISNA Olustu..." + ex.Message);
+}
+finally {
+    Console.WriteLine("Istisna olsa da olmasa da her durumda calis...");
+}
+Console.WriteLine("Merhaba");
+
+----------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    internal class TenException:Exception
+    {
+        public override string Message => "10 olamaz....";
+    }
+}
+
+
+//throw kullanımı...
+
+using ConsoleApp5;
+int sayi = int.Parse(Console.ReadLine());
+
+try
+{
+    if (sayi == 5)
+        throw new Exception("5 olamaz...");
+    else if (sayi == 10)
+        throw new TenException();
+}
+catch (Exception ex)
+{
+
+    Console.WriteLine(ex.Message);
+   
+}
+
+-------------------------------------------
+
+
+
+
