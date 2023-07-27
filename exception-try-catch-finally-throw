@@ -135,6 +135,85 @@ catch (Exception ex)
 
 -------------------------------------------
 
+/*
+
+int sayi1 = 10;
+int sayi2 = 20;
+
+int sonuc = sayi1 + sayi2;
+
+//Console.WriteLine("sonuc: " + sonuc);
+Console.WriteLine($"sonuç: {sonuc}");
+
+int sayi3 = 30;
+int sayi5 = 0;
+
+try
+{
+  int sonuc2 = sayi3 / sayi5;
+  Console.WriteLine($"Bölme sonuç: {sonuc2}");
+}
+catch (DivideByZeroException)
+{
+  Console.WriteLine("sayı sıfıra bölünemez"); // intellisense kod yazımını iyileştirmek
+}
+catch (Exception)
+{
+  Console.WriteLine("uygulamada bir hata meydana geldi");
+}
+finally
+{
+  // try da olsa catch de olsa burada hangi kodun çalışmasını isterseniz onları yazabilirsiniz
+  Console.WriteLine("Program sonlandı");
+}
+
+*/
+
+-------------------------------------------
+/*
+
+int sayi1 = 0, sayi2 =0 ; // global scope 
+basla: // nirengi noktası uygulamanın ilk çalışmaya başladığı nokta // label tanımı
+
+try
+{
+  // block scope
+  // try blokları genelde tür dönüşüm işlemlerinde hataya neden olur.
+  Console.WriteLine("Sayi1 giriniz");
+    sayi1 = int.Parse(Console.ReadLine());
+
+  Console.WriteLine("Sayi2 giriniz");
+    sayi2 = Convert.ToInt32(Console.ReadLine());
+
+  Convert.ToInt32(5.5); // 5; convert ile iki sayısal ifade arasında dönüşüm mümkün.
+
+}
+catch (FormatException hata)
+{
+  // exception dan gelen hata mesajını direkt kullanıcıya göstermek için
+  Console.WriteLine(hata.Message); 
+}
+
+if (sayi1 > sayi2)
+{
+  Console.WriteLine("Sayi1 büyük");
+}
+else if(sayi2 > sayi1)
+{
+  Console.WriteLine("Sayi2 büyük");
+} 
+else
+{
+  Console.WriteLine("Sayılar eşit");
+  // szyılar eşitse tüm kodlar yukarı yönlü çalışsın başa dönsün diye
+  goto basla; // label tanıma yönlen
+}
+
+*/
+
+-------------------------------------------
+
+
 
 
 
